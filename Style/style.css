@@ -1,0 +1,312 @@
+:root{
+    --fm: 'Raleway', sans-serif;
+    --fm-roboto: 'Roboto', sans-serif;
+    --fm-thin: 100;
+    --fm-light: 300;
+    --fm-regular: 400;
+    --fm-medium: 500;
+    --fm-bold: 700;
+    --fm-black: 900;
+    --green_75: rgb(105,207,23, 0.75);
+    --green_90: rgb(105,207,23, 0.90);
+    --green: #69cf17;
+    --green_1: #4c9a0d;
+    --green_2: #62be19;
+    --white: #fff;
+    --white_g: #dedede;
+    --grey: #7a7a7a;
+    --dark: #060002;
+    --black: rgba(0,0,0,0.1);
+    --col-1: calc(100% / 12 * 1);
+    --col-2: calc(100% / 12 * 2);
+    --col-3: calc(100% / 12 * 3);
+    --col-4: calc(100% / 12 * 4);
+    --col-5: calc(100% / 12 * 5);
+    --col-6: calc(100% / 12 * 6);
+    --col-7: calc(100% / 12 * 7);
+    --col-8: calc(100% / 12 * 8);
+    --col-9: calc(100% / 12 * 9);
+    --col-10: calc(100% / 12 * 10);
+    --col-11: calc(100% / 12 * 11);
+    --col-12: calc(100% / 12 * 12);
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--fm);
+    background: var(--dark);
+}
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-start{
+    justify-content: flex-start;
+}
+.align-item-center{
+    align-items: center;
+}
+.align-item-start{
+    align-items: start;
+}
+.flex-direction-colomn{
+    flex-direction: column;
+}
+.col-12{
+    width: var(--col-12);
+    padding:0 15px ;
+}
+.col-4{
+    width: var(--col-4);
+    padding: 0 15px;
+}
+header{
+    width: 100%;
+    height: 770px;
+    background: url('../images/bg_header.jpg') no-repeat center bottom / cover;
+}
+.logo{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    text-transform: uppercase;
+    padding: 11px 22px;
+    background: var(--green_1);
+    border-radius: 5px;
+    border: 3px solid var(--green_2);
+    box-shadow: inset 0 0 20px var(--black);
+    line-height: 17px;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li a{
+    color: var(--green);
+    font-weight: var(--fm-regular);
+    font-size: 20px;
+    padding: 36px 26px 29px 26px;
+    display: flex;
+    text-align: center;
+}
+header nav ul li .avtivee{
+    padding: 26px 11px 29px 11px;
+    background: var(--green_75);
+    color: var(--white);
+}
+header nav ul li .avtivee span{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--green);
+    margin-left: 8px;   
+}
+header h1{
+    color: var(--green);
+    font-weight: var(--fm-regular);
+    font-size: 72px;
+    margin-top: 150px;
+    text-transform: uppercase;
+}
+header p:first-of-type{
+    color: var(--green);
+    font-size: 36px;
+    font-weight: var(--fm-regular);
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+header p:nth-of-type(2){
+    color: #dedede;
+    font-size: 18px;
+    font-weight: var(--fm-regular);
+    line-height: 25px;
+    margin-top: 30px;
+    margin-bottom: 75px;
+}
+header .header_price{
+    padding: 28px 90px;
+    background: var(--green_75);
+    color: white;
+    font-size: 60px;
+    font-weight: var(--fm-thin);
+}
+main ul{
+    margin:50px 0 60px;
+}
+main ul li{
+    margin-right: 50px;
+}
+main ul li a{
+    font-size:28px ;
+    font-weight: var(--fm-regular);
+    color: var(--grey);
+    transition: 500ms;
+}
+main ul li .active,
+main ul li a:hover{
+    color: var(--green);
+}
+main .section_img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+main .section_img .price span{
+    padding: 20px 60px;
+    background: var(--green_75);
+    font-size: 24px;
+    color: var(--white);
+    display: block;
+}
+main .section_img .price{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+main .section_img button{
+    width: 100%;
+    height: 350px;
+    background: var(--green_90);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    color: var(--white);
+    font-weight: var(--fm-regular);
+    opacity: 0;
+    transition: 1000ms;
+    cursor: pointer;
+}
+main .section_img button:hover{
+    opacity: 1;
+    /* transform: rotate(360deg); */
+}
+main .section_img:hover .price{
+    opacity: 0;
+}
+
+main section h2{
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    color: var(--green);
+    margin: 30px 0 13px 0;
+    text-transform: uppercase;
+
+}
+main section p{
+    font-size: 16px;
+    font-weight: var(--fm-regular) ;
+    color:  var(--white_g);
+    line-height: 27px;
+    margin-bottom: 50px;
+}
+
+/* section */
+
+.section{
+    width: 100%;
+    height: 560px;
+    background: url('../images/STREET_06.jpg') no-repeat center/cover;
+}
+
+.section h2{
+    color: var(--green);
+    font-size:36px ;
+    font-weight:var(--fm-bold);
+    text-transform: uppercase;
+    margin-top: 45px;
+    
+}
+
+.section h2::after{
+    content: "";
+    display: block;
+    max-width: 50%;
+    height: 2px;
+    background: var(--green);
+    margin:20px auto 50px;
+}
+
+.section p{
+    color: var(--white_g);
+    font-size: 18px;
+    font-weight: var(--fm-regular);
+    line-height: 24px;
+
+}
+.section p:last-of-type{
+    margin:30px 0 100px;
+}
+
+.map{
+    background: white;
+    padding: 50px 0 0;
+
+}
+.map h2{
+    color: var(--green);
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+footer .footer_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 50px 0;
+}
+footer .footer_info .phone{
+    color: var(--green_1);
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    font-family: var(--fm-roboto) ;
+}
+
+footer .footer_nav ul{
+    display: flex;
+    justify-content: center;
+
+}
+footer .footer_nav ul li a{
+    color: var(--white);
+    margin: 0 27px;
+    font-size: 18px;
+    font-weight: var(--fm-regular);
+
+}
+footer p{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 100;
+    margin: 40px 0 50px 0;
+    text-align: center;
+
+}
+
+
+
+
+
+

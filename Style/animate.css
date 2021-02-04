@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    border: 5px solid red;
+}
+.wrap .box{
+    width: 300px;
+    height: 200px;
+    /* border: 3px solid green; */
+    background: yellow;
+    animation: anim 2s ease-in-out infinite;
+}
+@keyframes anim{
+    0%{
+        transform: translate(0px);
+    } 
+    25%{
+        transform: translate(50px);
+    } 
+    50%{
+        transform: translate(100px);
+    } 
+    75%{
+        transform: translate(50px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+    
+}
